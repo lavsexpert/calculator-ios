@@ -27,13 +27,23 @@
     }
 }
 
-- (double)preformOperation:(NSString *)operation{
-    if ([operation isEqual:@"v"])
-    {
+- (double)performOperation:(NSString *)operation{
+    if ([operation isEqual:@"C"]) {
+        operand = 0;
+    } else if ([operation isEqual:@"1/x"]){
+        if (operand) {
+            operand = 1 / operand;
+        }
+    } else if ([operation isEqual:@"+/-"]){
+        operand = 0 - operand;
+    } else if ([operation isEqual:@"v"]){
         operand = sqrt(operand);
-    } else {
+    } else if ([operation isEqual:@"="]){
         [self performWaitingOperation];
         waitingOperation = operation;
+        waitingOperand = operand;
+    } else {
+        [self performWaitingOperation];
         waitingOperand = operand;
     }
     return operand;
