@@ -15,6 +15,7 @@
 		E28DD47A21CBBF24005D8718 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28DD47921CBBF24005D8718 /* main.m */; };
 		E28DD48421CBBF25005D8718 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28DD48321CBBF25005D8718 /* CalculatorTests.m */; };
 		E28DD48F21CBBF25005D8718 /* CalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E28DD48E21CBBF25005D8718 /* CalculatorUITests.m */; };
+		E28DD49D21CBBF84005D8718 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = E28DD49C21CBBF84005D8718 /* CalculatorBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		E28DD48A21CBBF25005D8718 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28DD48E21CBBF25005D8718 /* CalculatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorUITests.m; sourceTree = "<group>"; };
 		E28DD49021CBBF25005D8718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E28DD49C21CBBF84005D8718 /* CalculatorBrain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
+		E28DD49E21CBBFAF005D8718 /* CalculatorBrain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		E28DD46921CBBF16005D8718 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E28DD49C21CBBF84005D8718 /* CalculatorBrain.m */,
+				E28DD49E21CBBFAF005D8718 /* CalculatorBrain.h */,
 				E28DD46A21CBBF16005D8718 /* AppDelegate.h */,
 				E28DD46B21CBBF16005D8718 /* AppDelegate.m */,
 				E28DD46D21CBBF16005D8718 /* ViewController.h */,
@@ -264,6 +269,7 @@
 			files = (
 				E28DD46F21CBBF16005D8718 /* ViewController.m in Sources */,
 				E28DD47A21CBBF24005D8718 /* main.m in Sources */,
+				E28DD49D21CBBF84005D8718 /* CalculatorBrain.m in Sources */,
 				E28DD46C21CBBF16005D8718 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
