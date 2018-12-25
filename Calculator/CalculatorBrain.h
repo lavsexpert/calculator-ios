@@ -7,11 +7,14 @@
 //
 
 @interface CalculatorBrain: NSObject {
-    double operand;
-    NSString *waitingOperation;
-    double waitingOperand;
+    BOOL binary;
+    NSString *operation;
+    double first;
+    double second;
+    double display;
 }
-@property double operand;
-- (void)performWaitingOperation;
-- (double)performOperation:(NSString *)operation;
+- (void)calculateTwo;
+- (double)calculate:(NSString *)newOperation:(double)newOperand;
+- (void)updateOperand:(double)newOperand;
+- (NSString *)more;
 @end

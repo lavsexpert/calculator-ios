@@ -20,23 +20,31 @@
 }
 
 - (IBAction)operationPressed:(UIButton *)sender{
-    if (userIsInTheMiddleOfTypingANumber){
-        self.brain.operand = [display.text doubleValue];
-        userIsInTheMiddleOfTypingANumber = NO;
+    // Выключаем добавление цифр на дисплее
+    if (appendingDigit){
+        appendingDigit = NO;
     }
+    // Сохраняем операцию и операнд, просим мозг посчитать
+    double operand = [display.text doubleValue];
     NSString *operation = sender.titleLabel.text;
-    double result = [self.brain performOperation:operation];
+    double result = [self.brain calculate:operation:operand];
+    // Выводим результат вычислений
     display.text = [NSString stringWithFormat:@"%g", result];
+    more.text = [self.brain more];
 }
 
 - (IBAction)digitPressed:(UIButton *)sender {
+    // Сохраняем введённую цифру и добавляем её в конец
     NSString *digit = sender.titleLabel.text;
-    if (userIsInTheMiddleOfTypingANumber) {
+    if (appendingDigit) {
         display.text = [display.text stringByAppendingString:digit];
+    // или выводим цифру на дисплей и включаем режим добавления цифр
     } else {
         display.text = digit;
-        userIsInTheMiddleOfTypingANumber = YES;
+        appendingDigit = YES;
     }
+    [self.brain updateOperand:[display.text doubleValue]];
+    more.text = [self.brain more];
 }
 
 @end
