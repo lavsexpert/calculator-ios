@@ -179,7 +179,7 @@
                                 <rect key="frame" x="80" y="122" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="v"/>
+                                <state key="normal" title="√"/>
                                 <connections>
                                     <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="mz7-H9-Nsd"/>
                                 </connections>
