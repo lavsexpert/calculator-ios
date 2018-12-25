@@ -10,119 +10,40 @@
 #import "CalculatorBrain.h"
 
 @implementation CalculatorBrain
+@synthesize operation;
+@synthesize first;
+@synthesize second;
+@synthesize result;
 
-- (void)setUnary:(NSString *)newOperation:(double)newOperand;
-{
-    binary = NO;
-    operation = newOperation;
-    first = newOperand;
-    second = 0;
-}
-
-- (double)calculate:(NSString *)newOperation:(double)newOperand{
-    // После нажатия кнопки операции выполним:
-    // 1) сохранить в память 2й операнд
-    // 2) выполнить операцию, вывести на дисплей результат
-    saved = second;
-    if ([newOperation isEqual:@"C"]||[newOperation isEqual:@""]) {
-        
-        [self setUnary:@"":newOperand];
-        display = 0;
-        
-    } else if ([newOperation isEqual:@"1/x"]){
-        
-        [self setUnary:newOperation:newOperand];
-        if (newOperand) {
-            display = 1 / newOperand;
+- (double)calculate:(NSString *)operation :(double)first :(double)second{
+    
+    self.operation = operation;
+    self.first = first;
+    self.second = second;
+    
+    if ([operation isEqual:@"C"]||[operation isEqual:@""]) {
+        self.result = 0;
+    } else if ([operation isEqual:@"1/x"]){
+        if (first) {
+            self.result = 1 / first;
         } else {
-            display = 0;
+            self.result = 0;
         }
-        
-    } else if ([newOperation isEqual:@"+/-"]){
-        
-        [self setUnary:newOperation:newOperand];
-        display = - newOperand;
-        
-    } else if ([newOperation isEqual:@"√"]){
-        
-        [self setUnary:newOperation:newOperand];
-        if (newOperand >= 0) {
-            display = sqrt(newOperand);
+    } else if ([operation isEqual:@"+/-"]){
+        if (first){
+            self.result = - first;
+        } else {
+            self.result = 0;
         }
-        else{
-            display = sqrt(- newOperand);
+    } else if ([operation isEqual:@"√"]){
+        if (first < 0) {
+            self.first = - first;
         }
-        
-    } else if ([newOperation isEqual:@"="]){
-        
-        [self calculate:operation:display];
-        
+        self.result = sqrt(self.first);
     } else {
-        
-        binary = YES;
-        first = display;
-        second = newOperand;
-        
-        if([@"+" isEqual:operation])
-        {
-            display = first + second;
-        } else if ([@"*" isEqual:operation]){
-            display = first * second;
-        } else if ([@"-" isEqual:operation]){
-            display = first - second;
-        } else if ([@"/" isEqual:operation]){
-            if (second) {
-                display = first / second;
-            } else {
-                display = 0;
-            }
-        }
-        
+        self.result = 0;
     }
-    return display;
-}
-
-- (void)updateOperand:(double)newOperand{
-    // После нажатия цифры в мозге осталось сделать:
-    // 2) если операция пустая:
-    // - сохранить содержимое дисплея в 1й операнд
-    // - очистить 2й операнд
-    // 3) если операция заполнена:
-    // - восстановить в 1й операнд сохранённое ранее значение 2го операнда
-    // - сохранить содержимое дисплея во 2й операнд
-    if ([operation isEqual:@""]){
-        first = newOperand;
-        second = 0;
-    } else {
-        first = saved;
-        second = newOperand;
-    }
-}
-
-- (void)updateOperation:(NSString *)newOperation:(double)newOperand{
-    // После нажатия кнопки операции и вывода результата осталось:
-    // 3) поменять операцию на нажатую или очистить унарную
-    // 4) поместить то, что на дисплее в 1й операнд
-    // 5) очистить 2й операнд
-    first = newOperand;
-    if (binary) {
-        operation = @"";
-    } else {
-        operation = newOperation;
-    }
-    second = 0;
-}
-
-- (NSString *)more {
-    if ([operation isEqual:@""]) {
-        return @"";
-    // Если операция унарная, то выводим в формате @(a) = z
-    } else if (!binary){
-        return [NSString stringWithFormat:@"%@(%g) = %g", operation, first, display];
-    // Если операция бинарная, то выводим в формате a @ b = z
-    } else {
-        return [NSString stringWithFormat:@"%g %@ %g = %g", first, operation, second, display];
-    }
+    return self.result;
 }
 
 @end

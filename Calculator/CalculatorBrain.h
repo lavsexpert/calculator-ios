@@ -7,16 +7,16 @@
 //
 
 @interface CalculatorBrain: NSObject {
-    BOOL binary;
     NSString *operation;
     double first;
     double second;
-    double display;
-    double saved;
+    double result;
 }
-- (void)setUnary:(NSString *)newOperation:(double)newOperand;
-- (double)calculate:(NSString *)newOperation:(double)newOperand;
-- (void)updateOperand:(double)newOperand;
-- (void)updateOperation:(NSString *)newOperation:(double)newOperand;
-- (NSString *)more;
+- (double)calculate :(NSString *)operation :(double)first :(double)second;
+
+@property NSString *operation;
+@property double first;
+@property double second;
+@property double result;
+
 @end

@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="1"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="kGR-XR-VV5"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="gcu-Bh-lZt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHF-79-ZXd">
@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="2"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dDU-cd-kRa"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="LIv-H2-fXn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4p-Ax-eC4">
@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="3"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="IQw-fS-rtZ"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="qDh-4M-XP1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avp-y9-ouv">
@@ -58,7 +58,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="4"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="fRc-LQ-43x"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ufv-lK-tup"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urd-As-mxf">
@@ -67,7 +67,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="5"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Yfo-vK-FaO"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="N1v-ka-Bxf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQm-rH-z6Y">
@@ -76,7 +76,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="6"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="2SM-Ct-mTB"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="EcP-lq-56h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBO-WI-oir">
@@ -85,7 +85,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="7"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="2Ny-dx-t7b"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BPk-ev-g7O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J0-1h-hIF">
@@ -94,7 +94,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="8"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="avL-Un-7ps"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AQi-1q-2nm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3np-E6-3hl">
@@ -103,7 +103,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="9"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hrr-bB-epd"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hG2-qx-tUy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7k-IE-37a">
@@ -112,7 +112,7 @@
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="0"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="TcK-kI-33P"/>
+                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="rYQ-ZI-m1T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-H2-ct9">
@@ -120,6 +120,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="."/>
+                                <connections>
+                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="y7X-Vm-5NL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-be-4os">
                                 <rect key="frame" x="240" y="120" width="80" height="80"/>
@@ -127,7 +130,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="/"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="4Fy-tM-LZz"/>
+                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="OlH-zO-gpV"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTM-44-3wh">
@@ -136,7 +139,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="*"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="tk1-UM-8sU"/>
+                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="uYa-DR-v6X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-AP-HuD">
@@ -145,7 +148,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Nvw-UR-HNi"/>
+                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="DJI-VG-evj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oha-sw-FQT">
@@ -154,7 +157,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="826-JN-dMM"/>
+                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Z4N-b6-FZX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-SV-0eN">
@@ -163,7 +166,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+/-"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AHd-6J-FsB"/>
+                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Y1L-9Z-YSD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-3h-BL4">
@@ -172,7 +175,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="1/x"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="5Rf-tE-Xiy"/>
+                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="6hm-kD-6Bn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-tk-ByX">
@@ -181,7 +184,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="√"/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="mz7-H9-Nsd"/>
+                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="9VL-QM-Udi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-lS-d2y">
@@ -192,7 +195,7 @@
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="IA4-GQ-Foe"/>
+                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Rio-jD-I9y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-BG-Skr">
@@ -201,10 +204,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="iga-N6-rXi"/>
+                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="tDt-BK-8zA"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="more" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K78-2x-1P0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K78-2x-1P0">
                                 <rect key="frame" x="16" y="90" width="288" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
