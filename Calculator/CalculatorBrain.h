@@ -8,13 +8,16 @@
 
 @interface CalculatorBrain: NSObject {
     NSString *operation;
+    NSString *prevOperation;
     double first;
     double second;
     double result;
 }
 - (double)calculate :(NSString *)operation :(double)first :(double)second;
+- (void)clear;
 
 @property NSString *operation;
+@property NSString *prevOperation;
 @property double first;
 @property double second;
 @property double result;

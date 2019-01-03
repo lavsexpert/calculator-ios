@@ -11,6 +11,7 @@
 
 @implementation CalculatorBrain
 @synthesize operation;
+@synthesize prevOperation;
 @synthesize first;
 @synthesize second;
 @synthesize result;
@@ -21,9 +22,8 @@
     self.first = first;
     self.second = second;
     
-    if ([operation isEqual:@"C"]||[operation isEqual:@""]) {
-        self.result = 0;
-    } else if ([operation isEqual:@"1/x"]){
+    // Унарные операции
+    if ([operation isEqual:@"1/x"]){
         if (first) {
             self.result = 1 / first;
         } else {
@@ -40,10 +40,32 @@
             self.first = - first;
         }
         self.result = sqrt(self.first);
+        
+    // Бинарные операции
+    } else if ([operation isEqual:@"+"]){
+        self.result = first + second;
+    } else if ([operation isEqual:@"-"]){
+        self.result = first - second;
+    } else if ([operation isEqual:@"*"]){
+        self.result = first * second;
+    } else if ([operation isEqual:@"/"]){
+        if (second) {
+            self.result = first / second;
+        } else {
+            self.result = 0;
+        }
     } else {
         self.result = 0;
     }
     return self.result;
+}
+
+- (void) clear{
+    self.operation = @"";
+    self.prevOperation = @"";
+    self.first = 0;
+    self.second = 0;
+    self.result = 0;
 }
 
 @end

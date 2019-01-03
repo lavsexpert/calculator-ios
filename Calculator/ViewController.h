@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController {
     IBOutlet UILabel *display;
+    IBOutlet UILabel *operation;
     IBOutlet UILabel *more;
     CalculatorBrain *brain;
     BOOL appendingDigit;
@@ -20,4 +21,5 @@
 - (IBAction)unaryPressed:(UIButton *)sender;
 - (IBAction)binaryPressed:(UIButton *)sender;
 - (IBAction)managePressed:(UIButton *)sender;
+- (void)showMore;
 @end
