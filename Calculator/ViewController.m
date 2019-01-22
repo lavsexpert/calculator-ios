@@ -51,7 +51,7 @@
 // При обновлении дисплея ...
 - (void)updateDisplay :(NSString *)button{
     // Мозг начинает думать и обновляет отображенное
-    [self.brain thinking :button :[display.text doubleValue]];
+    [self.brain compute :button :[display.text doubleValue]];
     more.text = self.brain.more;
 }
 

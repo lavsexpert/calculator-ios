@@ -16,7 +16,7 @@
     NSString *prevOperation;
 }
 
-- (void)thinking :(NSString *)button :(double)display;
+- (void)compute :(NSString *)button :(double)display;
 - (double)calculate :(double)first :(NSString *)operation :(double)second;
 - (void)more:(BOOL)unary;
 
