@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omu-t4-HNW">
-                                <rect key="frame" x="16" y="22" width="262" height="60"/>
+                                <rect key="frame" x="16" y="22" width="288" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
@@ -115,13 +115,13 @@
                                     <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="rYQ-ZI-m1T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-H2-ct9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-H2-ct9">
                                 <rect key="frame" x="160" y="480" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="."/>
                                 <connections>
-                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="y7X-Vm-5NL"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="exp-bf-0dy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-be-4os">
@@ -130,7 +130,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="/"/>
                                 <connections>
-                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="OlH-zO-gpV"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="RKP-Uh-Plj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTM-44-3wh">
@@ -139,7 +139,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="*"/>
                                 <connections>
-                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="uYa-DR-v6X"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="1hc-95-Ga9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-AP-HuD">
@@ -148,7 +148,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="DJI-VG-evj"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="d7w-YO-eDE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oha-sw-FQT">
@@ -157,34 +157,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="binaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Z4N-b6-FZX"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="3ku-rG-Aq6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-SV-0eN">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-SV-0eN">
                                 <rect key="frame" x="0.0" y="480" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="+/-"/>
                                 <connections>
-                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Y1L-9Z-YSD"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="eDD-8z-YMb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-3h-BL4">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-3h-BL4">
                                 <rect key="frame" x="160" y="122" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="1/x"/>
                                 <connections>
-                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="6hm-kD-6Bn"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="dWH-S2-Xg0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-tk-ByX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb7-tk-ByX">
                                 <rect key="frame" x="80" y="122" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="40"/>
                                 <state key="normal" title="√"/>
                                 <connections>
-                                    <action selector="unaryPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="9VL-QM-Udi"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="6DC-EB-vge"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtv-lS-d2y">
@@ -195,16 +195,16 @@
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="Rio-jD-I9y"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="XwA-oc-7fq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-BG-Skr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-BG-Skr">
                                 <rect key="frame" x="240" y="480" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="="/>
                                 <connections>
-                                    <action selector="managePressed:" destination="BYZ-38-t0r" eventType="touchDown" id="tDt-BK-8zA"/>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="m3p-fP-eha"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K78-2x-1P0">
@@ -214,13 +214,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sC-I2-xvK">
-                                <rect key="frame" x="272" y="22" width="32" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -228,7 +221,6 @@
                     <connections>
                         <outlet property="display" destination="omu-t4-HNW" id="PoU-cn-6sP"/>
                         <outlet property="more" destination="K78-2x-1P0" id="ikP-YP-deO"/>
-                        <outlet property="operation" destination="9sC-I2-xvK" id="FPS-WD-jNC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

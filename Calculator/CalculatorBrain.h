@@ -7,19 +7,25 @@
 //
 
 @interface CalculatorBrain: NSObject {
-    NSString *operation;
-    NSString *prevOperation;
     double first;
+    NSString *operation;
     double second;
     double result;
+    NSString *more;
+    double savedNumber;
+    NSString *prevOperation;
 }
-- (double)calculate :(NSString *)operation :(double)first :(double)second;
-- (void)clear;
+
+- (void)thinking :(NSString *)button :(double)display;
+- (double)calculate :(double)first :(NSString *)operation :(double)second;
+- (void)more:(BOOL)unary;
 
 @property NSString *operation;
-@property NSString *prevOperation;
 @property double first;
 @property double second;
 @property double result;
+@property NSString *more;
+@property double savedNumber;
+@property NSString *prevOperation;
 
 @end

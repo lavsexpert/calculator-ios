@@ -34,45 +34,18 @@
         display.text = digit;
         appendingDigit = YES;
     }
-    double second = [display.text doubleValue];
-    [self.brain calculate: self.brain.operation: self.brain.first: second];
-    [self showMore];
+    [self updateDisplay: sender.titleLabel.text];
 }
 
-- (IBAction)unaryPressed:(UIButton *)sender{
+- (IBAction)operationPressed:(UIButton *)sender{
     appendingDigit = NO;
-    NSString *operation = sender.titleLabel.text;
-    double first = [display.text doubleValue];
-    double result = [self.brain calculate: operation: first: 0];
-    display.text = [NSString stringWithFormat:@"%g", result];
-    [self showMore];
+    [self updateDisplay: sender.titleLabel.text];
+    display.text = [NSString stringWithFormat:@"%g", self.brain.result];
 }
 
-- (IBAction)binaryPressed:(UIButton *)sender{
-    appendingDigit = NO;
-    NSString *operation = sender.titleLabel.text;
-    self.brain.prevOperation = operation;
-    [self showMore];
-}
-
-- (IBAction)managePressed:(UIButton *)sender{
-    if ([self.brain.operation isEqual:@"C"]||[self.brain.operation isEqual:@""]){
-        [self.brain clear];
-    }
-    display.text = @"0";
-    more.text = @"";
-    
-}
-
-- (void)showMore{
-    if ([self.brain.operation isEqual:@"C"]||[self.brain.operation isEqual:@""]){
-        more.text = @"";
-    } else if ([self.brain.operation isEqual:@"+"]||[self.brain.operation isEqual:@"-"]||[self.brain.operation isEqual:@"*"]||[self.brain.operation isEqual:@"/"]){
-        
-        more.text = [NSString stringWithFormat:@"%g %@ %g = %g", self.brain.first, self.brain.operation, self.brain.second, self.brain.result];
-    } else {
-        more.text = [NSString stringWithFormat:@"%@(%g) = %g", self.brain.operation, self.brain.first, self.brain.result];
-    }
+- (void)updateDisplay :(NSString *)button{
+    [self.brain thinking :button :[display.text doubleValue]];
+    more.text = self.brain.more;
 }
 
 @end
