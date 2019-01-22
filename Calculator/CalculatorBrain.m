@@ -26,11 +26,10 @@
         ||[button isEqual:@"7"]||[button isEqual:@"8"]||[button isEqual:@"9"]
         ||[button isEqual:@"0"]){
         
-        if([operation isEqual:@""]){
+        if([operation isEqual:@""]||[operation isEqual:nil]){
             self.first = self.result;
             self.operation = @"";
             self.second = display;
-            self.result = display;
         } else {
             self.first = self.savedNumber;
             self.operation = self.prevOperation;
@@ -46,7 +45,7 @@
             self.operation = button;
             self.second = 0;
         } else {
-            self.first = self.result;
+            self.first = display;
             self.operation = button;
             self.second = 0;
         }
