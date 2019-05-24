@@ -11,14 +11,21 @@
 
 @interface ViewController : UIViewController {
     IBOutlet UILabel *display;
-    IBOutlet UILabel *more;
     CalculatorBrain *brain;
-    BOOL appendingDigit;
+    double currents;
+    bool newDigit;
+    NSString *pendingOp;
 }
+
+- (IBAction)clearPressed:(UIButton *)sender;
+- (IBAction)clearEntryPressed:(UIButton *)sender;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;
 
-- (void)updateDisplay:(NSString *)button;
+- (IBAction)negativePressed:(UIButton *)sender;
+- (IBAction)inversePressed:(UIButton *)sender;
+- (IBAction)decimalPressed:(UIButton *)sender;
+- (IBAction)percentPressed:(UIButton *)sender;
 
 @end
