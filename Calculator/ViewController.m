@@ -19,17 +19,22 @@
     currents = 0;
     newDigit = false;
     operation = @"";
-    button = @"";
-    display = @"0";
     // Создаётся мозг калькулятора
     if (!brain) brain = [[CalculatorBrain alloc] init];
         return brain;
 }
 
-//  При нажатии на цифру ...
+//  При нажатии на цифру или десятичную точку ...
 - (IBAction)digitPressed:(UIButton *)sender {
-    display = displayLabel.text;
-    button = sender.titleLabel.text;
+    displayLabel.text = [self addDigit :sender.titleLabel.text :displayLabel.text];
+}
+
+// При нажатии на операцию, т.е. любую кнопку кроме цифр и десятичной точки ...
+- (IBAction)operationPressed:(UIButton *)sender{
+    displayLabel.text = [self compute :sender.titleLabel.text :displayLabel.text];
+}
+
+- (NSString*)addDigit :(NSString *)button :(NSString *)display{
     if(newDigit){
         display = ([button isEqualToString:@"."]) ? @"0." : button;
         newDigit = false;
@@ -44,58 +49,57 @@
             display = [display stringByAppendingString: button];
         }
     }
-    displayLabel.text = display;
+    return display;
 }
 
-// При нажатии на операцию ...
-- (IBAction)operationPressed:(UIButton *)sender{
-    display = displayLabel.text;
-    button = sender.titleLabel.text;
+- (NSString*)compute :(NSString *)button :(NSString *)display{
     if ([button isEqualToString:@"C"]) {
         currents = 0;
         operation = @"";
-        displayLabel.text = @"0";
+        display = @"0";
         newDigit = true;
     } else if([button isEqualToString:@"+/-"]){
-        displayLabel.text = [NSString stringWithFormat:@"%f", [display doubleValue] * (-1)];
+        display = [NSString stringWithFormat:@"%f", [display doubleValue] * (-1)];
         newDigit = true;
     } else if([button isEqualToString:@"1/x"]){
-        if([displayLabel.text doubleValue] == 0){
-            displayLabel.text = @"0";
+        if([display doubleValue] == 0){
+            display = @"0";
         } else {
-            displayLabel.text = [NSString stringWithFormat:@"%f", 1 / [displayLabel.text doubleValue]];
+            display = [NSString stringWithFormat:@"%f", 1 / [display doubleValue]];
         }
         newDigit = true;
     } else if(newDigit && ![operation isEqualToString:@"="]){
-        displayLabel.text = [NSString stringWithFormat:@"%f", currents];
+        display = [NSString stringWithFormat:@"%f", currents];
     } else {
         newDigit = true;
         if ([operation isEqualToString:@"+"]) {
-            currents += [displayLabel.text doubleValue];
+            currents += [display doubleValue];
         }
         else if ([operation isEqualToString:@"-"]){
-            currents -= [displayLabel.text doubleValue];
+            currents -= [display doubleValue];
         }
         else if ([operation isEqualToString:@"*"]){
-            currents *= [displayLabel.text doubleValue];
+            currents *= [display doubleValue];
         }
         else if ([operation isEqualToString:@"/"]){
-            if ([displayLabel.text doubleValue] == 0){
+            if ([display doubleValue] == 0){
                 currents = 0;
             } else {
-                currents /= [displayLabel.text doubleValue];
+                currents /= [display doubleValue];
             }
         }
         else if ([operation isEqualToString:@"%"]){
-            currents = ([displayLabel.text doubleValue] / 100) * currents;
+            currents = ([display doubleValue] / 100) * currents;
             newDigit = true;
         }
         else {
-            currents = [displayLabel.text doubleValue];
+            currents = [display doubleValue];
         }
-        displayLabel.text = [NSString stringWithFormat:@"%f", currents];
-        operation = sender.titleLabel.text;
+        display = [NSString stringWithFormat:@"%f", currents];
+        operation = button;
     }
+    return display;
 }
+
 
 @end
