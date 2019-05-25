@@ -50,7 +50,7 @@
                                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LiQ-Jn-cHy"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgF-Pg-FlY"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBH-SV-0eN">
@@ -58,8 +58,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="%"/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEb-KH-aNv"/>
-                                                    <action selector="percentPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Upc-Gf-wy3"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1bw-la-04C"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4f-3h-BL4">
@@ -67,8 +66,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="1/x"/>
                                                 <connections>
-                                                    <action selector="inversePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVY-T6-chQ"/>
-                                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D80-C6-l71"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1N-gq-rlU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oha-sw-FQT">
@@ -76,7 +74,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="+"/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jjp-2T-uRe"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yot-ig-ahI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -94,7 +92,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="7"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="BPk-ev-g7O"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wx7-iY-gRp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2J0-1h-hIF">
@@ -102,7 +100,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="8"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="AQi-1q-2nm"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6t-HR-c2S"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3np-E6-3hl">
@@ -110,7 +108,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="9"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="hG2-qx-tUy"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F78-RP-E9B"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-AP-HuD">
@@ -118,7 +116,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="-"/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oku-EY-GBj"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nck-bm-nvU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -136,7 +134,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="4"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="ufv-lK-tup"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TRX-rN-H78"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urd-As-mxf">
@@ -144,7 +142,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="5"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="N1v-ka-Bxf"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idM-nN-kdX"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQm-rH-z6Y">
@@ -152,15 +150,15 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="6"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="EcP-lq-56h"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YBX-EA-TLO"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTM-44-3wh">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTM-44-3wh">
                                                 <rect key="frame" x="240" y="0.0" width="80" height="91.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="*"/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2S-at-27l"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2r-cS-Fx7"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -178,7 +176,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="1"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="gcu-Bh-lZt"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zY3-Zt-hkF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHF-79-ZXd">
@@ -186,7 +184,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="2"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="LIv-H2-fXn"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jbb-GM-cgi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4p-Ax-eC4">
@@ -194,7 +192,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="3"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="qDh-4M-XP1"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cWO-eU-YE8"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-be-4os">
@@ -202,7 +200,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="/"/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b7g-jr-Y6F"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1va-q4-Iqa"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -220,8 +218,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="+/-"/>
                                                 <connections>
-                                                    <action selector="negativePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNa-Kj-hw7"/>
-                                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u89-hm-f0j"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zfZ-Tt-hG0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7k-IE-37a">
@@ -229,7 +226,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="0"/>
                                                 <connections>
-                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="rYQ-ZI-m1T"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Utk-W0-1dB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-H2-ct9">
@@ -237,8 +234,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="."/>
                                                 <connections>
-                                                    <action selector="decimalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEp-k2-ObW"/>
-                                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNP-DN-74T"/>
+                                                    <action selector="digitPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCb-Hw-8QN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-BG-Skr">
@@ -246,7 +242,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                                 <state key="normal" title="="/>
                                                 <connections>
-                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Pv-Ab-PRX"/>
+                                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ls-B2-nhN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -276,7 +272,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="display" destination="omu-t4-HNW" id="PoU-cn-6sP"/>
+                        <outlet property="displayLabel" destination="omu-t4-HNW" id="rp0-GE-hJs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

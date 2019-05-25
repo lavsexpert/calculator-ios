@@ -10,20 +10,16 @@
 #import "CalculatorBrain.h"
 
 @interface ViewController : UIViewController {
-    IBOutlet UILabel *display;
+    __weak IBOutlet UILabel *displayLabel;
     CalculatorBrain *brain;
-    double currents;
     bool newDigit;
-    NSString *pendingOp;
+    double currents;
+    NSString *operation;
+    NSString *button;
+    NSString *display;
 }
-
-- (IBAction)clearPressed:(UIButton *)sender;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;
-
-- (IBAction)negativePressed:(UIButton *)sender;
-- (IBAction)inversePressed:(UIButton *)sender;
-- (IBAction)decimalPressed:(UIButton *)sender;
 
 @end
