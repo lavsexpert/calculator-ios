@@ -60,6 +60,10 @@
                 currents /= [display.text doubleValue];
             }
         }
+        else if ([pendingOp isEqualToString:@"%"]){
+            currents = ([display.text doubleValue] / 100) * currents;
+            newDigit = true;
+        }
         else {
             currents = [display.text doubleValue];
         }
@@ -71,7 +75,8 @@
 - (IBAction)clearPressed:(UIButton *)sender{
     currents = 0;
     pendingOp = @"";
-    [self clearEntryPressed: sender];
+    display.text = @"0";
+    newDigit = true;
 }
 
 
@@ -106,11 +111,6 @@
         }
     }
     display.text = currentDisplay;
-}
-
-- (IBAction)percentPressed:(UIButton *)sender{
-    display.text = [NSString stringWithFormat:@"%f", ([display.text doubleValue] / 100) * currents];
-    newDigit = true;
 }
 
 @end

@@ -18,7 +18,6 @@
 }
 
 - (IBAction)clearPressed:(UIButton *)sender;
-- (IBAction)clearEntryPressed:(UIButton *)sender;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;
@@ -26,6 +25,5 @@
 - (IBAction)negativePressed:(UIButton *)sender;
 - (IBAction)inversePressed:(UIButton *)sender;
 - (IBAction)decimalPressed:(UIButton *)sender;
-- (IBAction)percentPressed:(UIButton *)sender;
 
 @end

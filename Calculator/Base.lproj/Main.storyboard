@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omu-t4-HNW">
-                                <rect key="frame" x="16" y="22" width="288" height="60"/>
+                                <rect key="frame" x="16" y="22" width="288" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -133,6 +133,7 @@
                                 <state key="normal" title="."/>
                                 <connections>
                                     <action selector="decimalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JEp-k2-ObW"/>
+                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNP-DN-74T"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4b8-be-4os">
@@ -182,6 +183,7 @@
                                 <size key="titleShadowOffset" width="-2" height="-1"/>
                                 <state key="normal" title="%"/>
                                 <connections>
+                                    <action selector="operationPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QEb-KH-aNv"/>
                                     <action selector="percentPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Upc-Gf-wy3"/>
                                 </connections>
                             </button>
@@ -193,6 +195,7 @@
                                 <state key="normal" title="1/x"/>
                                 <connections>
                                     <action selector="inversePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVY-T6-chQ"/>
+                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D80-C6-l71"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-BG-Skr">
@@ -214,19 +217,7 @@
                                     <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Pf-E7-G7E"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDO-x4-8rB">
-                                <rect key="frame" x="65" y="140" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <size key="titleShadowOffset" width="-2" height="-1"/>
-                                <state key="normal" title="CE">
-                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearEntryPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLe-F6-M9A"/>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LiQ-Jn-cHy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-Uw-XWY">
@@ -237,6 +228,7 @@
                                 <state key="normal" title="+/-"/>
                                 <connections>
                                     <action selector="negativePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNa-Kj-hw7"/>
+                                    <action selector="specialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u89-hm-f0j"/>
                                 </connections>
                             </button>
                         </subviews>
