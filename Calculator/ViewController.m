@@ -31,11 +31,10 @@
     display = displayLabel.text;
     button = sender.titleLabel.text;
     if(newDigit){
-        display = ([display isEqualToString:@"."]) ? @"0." : button;
+        display = ([button isEqualToString:@"."]) ? @"0." : button;
         newDigit = false;
-    } else if ([display isEqualToString:@"."]) {
-        NSRange findPoint = [display rangeOfString:@"."];
-        if(findPoint.location == NSNotFound){
+    } else if ([button isEqualToString:@"."]) {
+        if([display rangeOfString:@"."].location == NSNotFound){
             display = [display stringByAppendingString:@"."];
         }
     } else {
