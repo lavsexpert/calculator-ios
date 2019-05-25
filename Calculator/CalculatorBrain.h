@@ -7,25 +7,16 @@
 //
 
 @interface CalculatorBrain: NSObject {
-    double first;
+    bool newDigit;
+    double currents;
     NSString *operation;
-    double second;
-    double result;
-    NSString *more;
-    double savedNumber;
-    NSString *prevOperation;
 }
 
-- (void)compute :(NSString *)button :(double)display;
-- (double)calculate :(double)first :(NSString *)operation :(double)second;
-- (void)more:(BOOL)unary;
+- (NSString*)addDigit :(NSString *)button :(NSString *)display;
+- (NSString*)compute :(NSString *)button :(NSString *)display;
 
+@property bool newDigit;
+@property double currents;
 @property NSString *operation;
-@property double first;
-@property double second;
-@property double result;
-@property NSString *more;
-@property double savedNumber;
-@property NSString *prevOperation;
 
 @end

@@ -12,11 +12,6 @@
 @interface ViewController : UIViewController {
     __weak IBOutlet UILabel *displayLabel;
     CalculatorBrain *brain;
-    bool newDigit;
-    double currents;
-    NSString *operation;
-    NSString *button;
-    NSString *display;
 }
 
 - (IBAction)digitPressed:(UIButton *)sender;

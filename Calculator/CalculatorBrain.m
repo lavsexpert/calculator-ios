@@ -11,136 +11,85 @@
 
 @implementation CalculatorBrain
 
-@synthesize first;
+@synthesize newDigit;
+@synthesize currents;
 @synthesize operation;
-@synthesize second;
-@synthesize result;
-@synthesize more;
-@synthesize savedNumber;
-@synthesize prevOperation;
 
-// Преобразование нажатой кнопки и выведенного на экране в параметры операции с последующим её выполнением.
-- (void)compute :(NSString *)button :(double)display{
-
-    // Если нажата цифра
-    if ([button isEqual:@"1"]||[button isEqual:@"2"]||[button isEqual:@"3"]
-        ||[button isEqual:@"4"]||[button isEqual:@"5"]||[button isEqual:@"6"]
-        ||[button isEqual:@"7"]||[button isEqual:@"8"]||[button isEqual:@"9"]
-        ||[button isEqual:@"0"]){
-        
-        // Если ещё не указывалась операция
-        if([operation isEqual:@""]||[operation isEqual:nil]){
-            self.first = 0;
-            self.operation = @"";
-            self.second = display;
-        } else {
-        // Если же уже есть первый операнд и операция указывалась
-            self.first = self.savedNumber;
-            self.operation = self.prevOperation;
-            self.second = display;
-        }
-        self.result = [self calculate :self.first :self.operation :self.second];
-        self.prevOperation = self.operation;
-    
-    // Если нажата кнопка сброса - очищаем все параметры операции
-    } else if ([button isEqual:@"C"]) {
-        self.first = 0;
-        self.operation = @"";
-        self.second = 0;
-        self.result = [self calculate :self.first :self.operation :self.second];
-        self.prevOperation = self.operation;
-        self.savedNumber = self.result;
-        
-    // Если нажата кнопка операции
-    } else {
-        // Если это первая операция с запуска или очистки
-        if([operation isEqual:@""]||[operation isEqual:@"="]){
-            self.first = display;
-            self.operation = button;
-            self.second = 0;
-        // Если же эта операция не первая
-        } else {
-            self.first = self.result;
-            self.operation = button;
-            self.second = 0;
-        }
-        self.result = [self calculate :self.first :self.operation :self.second];
-        self.prevOperation = self.operation;
-        self.savedNumber = self.result;
+- (id) init{
+    self = [super init];
+    if (self){
+        currents = 0;
+        newDigit = false;
+        operation = @"";
     }
+    return self;
 }
 
-// Вычисление операции: a @ b = ? или @(a) = ?
-- (double)calculate :(double)first :(NSString *)operation :(double)second{
-    
-    // Унарные операции
-    if ([operation isEqual:@"1/x"]){
-        if (first) {
-            self.result = 1 / first;
-        } else {
-            self.result = 0;
+- (NSString*)addDigit :(NSString *)button :(NSString *)display{
+    if(newDigit){
+        display = ([button isEqualToString:@"."]) ? @"0." : button;
+        newDigit = false;
+    } else if ([button isEqualToString:@"."]) {
+        if([display rangeOfString:@"."].location == NSNotFound){
+            display = [display stringByAppendingString:@"."];
         }
-        [self more: YES];
-        
-    } else if ([operation isEqual:@"+/-"]){
-        if (first){
-            self.result = - first;
-        } else {
-            self.result = 0;
-        }
-        [self more: YES];
-        
-    } else if ([operation isEqual:@"√"]){
-        if (first < 0) {
-            self.first = - first;
-        }
-        self.result = sqrt(self.first);
-        [self more: YES];
-        
-    // Бинарные операции
-    } else if ([operation isEqual:@"+"]){
-        self.result = first + second;
-        [self more: NO];
-        
-    } else if ([operation isEqual:@"-"]){
-        self.result = first - second;
-        [self more: NO];
-        
-    } else if ([operation isEqual:@"*"]){
-        self.result = first * second;
-        [self more: NO];
-        
-    } else if ([operation isEqual:@"/"]){
-        if (second) {
-            self.result = first / second;
-        } else {
-            self.result = 0;
-        }
-        [self more: NO];
-        
-    } else if ([operation isEqual:@"="]){
-        self.result = [self calculate :first :self.prevOperation :second];
-        self.prevOperation = @"";
-        self.operation = @"";
-        
     } else {
-        self.result = 0;
-        self.more = @"";
-        self.savedNumber = 0;
-
+        if([display isEqualToString: @"0"]){
+            display = button;
+        } else if(display.length < 10) {
+            display = [display stringByAppendingString: button];
+        }
     }
-    return self.result;
+    return display;
 }
 
-// Формирование строки с выполняемой операцией x @ y = z или @(x) = z
-- (void)more :(BOOL)unary{
-    if (unary){
-        // Унарные операции выводятся в виде @(x) = z
-        self.more = [NSString stringWithFormat:@"%@(%g) = %g", self.operation, self.first, self.result];
+- (NSString*)compute :(NSString *)button :(NSString *)display{
+    if ([button isEqualToString:@"C"]) {
+        currents = 0;
+        operation = @"";
+        display = @"0";
+        newDigit = true;
+    } else if([button isEqualToString:@"+/-"]){
+        display = [NSString stringWithFormat:@"%f", [display doubleValue] * (-1)];
+        newDigit = true;
+    } else if([button isEqualToString:@"1/x"]){
+        if([display doubleValue] == 0){
+            display = @"0";
+        } else {
+            display = [NSString stringWithFormat:@"%f", 1 / [display doubleValue]];
+        }
+        newDigit = true;
+    } else if(newDigit && ![operation isEqualToString:@"="]){
+        display = [NSString stringWithFormat:@"%f", currents];
     } else {
-        // Бинарные операции выводятся в виде x @ y = z
-        self.more = [NSString stringWithFormat:@"%g %@ %g = %g", self.first, self.operation, self.second, self.result];
+        newDigit = true;
+        if ([operation isEqualToString:@"+"]) {
+            currents += [display doubleValue];
+        }
+        else if ([operation isEqualToString:@"-"]){
+            currents -= [display doubleValue];
+        }
+        else if ([operation isEqualToString:@"*"]){
+            currents *= [display doubleValue];
+        }
+        else if ([operation isEqualToString:@"/"]){
+            if ([display doubleValue] == 0){
+                currents = 0;
+            } else {
+                currents /= [display doubleValue];
+            }
+        }
+        else if ([operation isEqualToString:@"%"]){
+            currents = ([display doubleValue] / 100) * currents;
+            newDigit = true;
+        }
+        else {
+            currents = [display doubleValue];
+        }
+        display = [NSString stringWithFormat:@"%f", currents];
+        operation = button;
     }
+    return display;
 }
 
 @end
